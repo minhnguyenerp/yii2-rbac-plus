@@ -10,6 +10,7 @@ use johnitvn\ajaxcrud\CrudAsset;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('rbac', 'Roles Manager');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('general', 'Users'), 'url' => ['/general/user']];
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
@@ -62,6 +63,7 @@ GridView::widget([
 Modal::begin([
     "id" => "ajaxCrubModal",
     "footer" => "", // always need it for jquery plugin
+    "size" => Modal::SIZE_LARGE,
 ])
 ?>
 <?php Modal::end(); ?>
